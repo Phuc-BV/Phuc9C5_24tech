@@ -1,10 +1,12 @@
 package com.tech.app.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.util.List;
 
 
 @Data
@@ -17,7 +19,10 @@ public class Roles {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int idRole;
 
-    @Column(nullable = false, length = 80)
+    @Column(columnDefinition = "VARCHAR(50) NOT NULL")
     private String role;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    @JsonIgnore
+    private List<User> users;
 }
