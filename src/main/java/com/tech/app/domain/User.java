@@ -1,6 +1,5 @@
 package com.tech.app.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -33,7 +32,8 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name= "id_role")
-    @JsonIgnore
     private User user;
+
+
 
 }
