@@ -23,7 +23,7 @@ public class Product {
     private String image;
 
     private Long price;
-    private Long Discount;
+    private Long discount;
 
     @Column(columnDefinition = "INTEGER DEFAULT 0")
     private Integer quantity;
