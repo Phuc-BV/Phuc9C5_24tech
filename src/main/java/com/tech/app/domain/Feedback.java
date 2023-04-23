@@ -18,6 +18,6 @@ import javax.persistence.Id;
 public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idFeedback;
+    private long idFeedback;
 
 }

@@ -12,7 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class RolesDTO  {
-    private int idRole;
+    private long idRole;
     private String role;
 
     private List<UserDTO> users;

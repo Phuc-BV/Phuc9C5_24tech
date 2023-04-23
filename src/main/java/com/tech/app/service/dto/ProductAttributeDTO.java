@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class ProductAttributeDTO {
-    private int idProductAtr;
+    private long idProductAtr;
     private String name;
     private String value;
 

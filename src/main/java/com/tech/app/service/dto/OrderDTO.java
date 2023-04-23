@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @Builder
 public class OrderDTO {
-    private int idOrder;
+    private long idOrder;
     private String name;
     private String email;
     private String phone;

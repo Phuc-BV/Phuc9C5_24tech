@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class ProductAttribute {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idProductAtr;
+    private long idProductAtr;
     @Column(columnDefinition = "VARCHAR(60) NOT NULL")
     private String name;
     @Column(columnDefinition = "VARCHAR(200) NOT NULL")

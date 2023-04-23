@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class OrderDetailDTO {
-    private int idOrderDetail;
+    private long idOrderDetail;
     private long price;
     private int num;
     private long totalPrice;
