@@ -1,5 +1,6 @@
 package com.tech.app.service.dto;
 
+import com.tech.app.domain.ERole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,7 +14,7 @@ import java.util.List;
 @Builder
 public class RolesDTO  {
     private long idRole;
-    private String role;
+    private ERole name;
 
-    private List<UserDTO> users;
+
 }

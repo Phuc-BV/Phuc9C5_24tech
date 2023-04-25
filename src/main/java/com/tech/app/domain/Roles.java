@@ -19,10 +19,9 @@ public class Roles {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long idRole;
 
-    @Column(columnDefinition = "VARCHAR(50) NOT NULL")
-    private String role;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private ERole name;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    @JsonIgnore
-    private List<User> users;
+
 }

@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderMapper implements EntityMapper<OrderDTO, Order>{
 
-    private OrderDetailMapper orderDetailMapper;
+//    private OrderDetailMapper orderDetailMapper;
     @Override
     public Order toEntity(OrderDTO dto) {
         Order order = new Order();
@@ -23,7 +23,7 @@ public class OrderMapper implements EntityMapper<OrderDTO, Order>{
              .phone(dto.getPhone())
              .status(dto.getStatus())
              .date(dto.getDate())
-             .orderDetails(orderDetailMapper.toEntity(dto.getOrderDetails()))
+//             .orderDetails(orderDetailMapper.toEntity(dto.getOrderDetails()))
              .build();
 
         return order;
@@ -39,7 +39,7 @@ public class OrderMapper implements EntityMapper<OrderDTO, Order>{
                 .phone(entity.getPhone())
                 .status(entity.getStatus())
                 .date(entity.getDate())
-                .orderDetails(orderDetailMapper.toDTO(entity.getOrderDetails()))
+//                .orderDetails(orderDetailMapper.toDTO(entity.getOrderDetails()))
                 .build();
         return orderDTO;
     }
@@ -56,7 +56,7 @@ public class OrderMapper implements EntityMapper<OrderDTO, Order>{
                     .phone(d.getPhone())
                     .status(d.getStatus())
                     .date(d.getDate())
-                    .orderDetails(orderDetailMapper.toEntity(d.getOrderDetails()))
+//                    .orderDetails(orderDetailMapper.toEntity(d.getOrderDetails()))
                     .build();
             orderList.add(order);
         });
@@ -75,7 +75,7 @@ public class OrderMapper implements EntityMapper<OrderDTO, Order>{
                     .phone(e.getPhone())
                     .status(e.getStatus())
                     .date(e.getDate())
-                    .orderDetails(orderDetailMapper.toDTO(e.getOrderDetails()))
+//                    .orderDetails(orderDetailMapper.toDTO(e.getOrderDetails()))
                     .build();
             orderDTOList.add(orderDTO);
         });

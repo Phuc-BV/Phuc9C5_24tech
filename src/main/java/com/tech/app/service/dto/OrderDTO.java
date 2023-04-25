@@ -20,5 +20,4 @@ public class OrderDTO {
     private int status;
     private Date date;
 
-    private List<OrderDetailDTO> orderDetails;
 }

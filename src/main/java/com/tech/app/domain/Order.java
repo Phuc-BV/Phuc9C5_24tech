@@ -36,7 +36,4 @@ public class Order {
     @Column(columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private Date date;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "order", fetch = FetchType.EAGER)
-    private List<OrderDetail> orderDetails;
 }
